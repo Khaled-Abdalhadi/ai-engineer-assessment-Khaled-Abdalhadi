@@ -74,3 +74,10 @@ This project is part of an assessment for an AI software engineer position at [A
   ```
   "The 2022 FIFA World Cup, hosted by Qatar, featured 32 competing teams across 64 matches, ultimately culminating in Argentina’s victory over France in the final. The tournament achieved a total attendance of 3,404,252 spectators, resulting in a healthy average of 53,191 fans per match. Kylian Mbappé finished as the tournament's top scorer, securing the Golden Boot with 8 goals."
   ```
+
+## References:
+
+   - [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
+   - [FastAPI Documentation](https://fastapi.tiangolo.com/tutorial/first-steps/)
+   - [FIFA World Cup 1930-2022 data](https://www.kaggle.com/datasets/piterfm/fifa-football-world-cup?resource=download&select=world_cup.csv)
+   - [Analyzing PDFs and CSV](https://geminibyexample.com/016-pdf-csv-analysis/)
