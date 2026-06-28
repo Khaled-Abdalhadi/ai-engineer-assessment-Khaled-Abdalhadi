@@ -5,7 +5,7 @@ from google.genai import types
 import requests
 import json
 
-gemini_api_key = "AQ.Ab8RN6JPn0k9__PvfdVzICbOrT0QEr0j3QK2rnP054EPzsBKXg"
+gemini_api_key = "AQ.Ab8RN6JMj_OFTJmemQ0zSafNpGzE-g_BDWO5EYsTIliTQaECQA"
 token = "3779984fa6a1dcc9471edd030d658461"
 superhero_base_url = f"https://superheroapi.com/api/{token}"
 
