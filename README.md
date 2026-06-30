@@ -109,6 +109,13 @@ You should see the chatbot interface
 
 ![Chatbot UI](./frontend/src/assets/chatbot_interface.png)
 
+5. If you run into any issues while sending messages to your backend API, make sure the constant `hostName`  in `the App.tsx` matches your actual backend host name.
+
+**Example:**
+
+![Backend URL](./frontend/src/assets/backend_url.png)
+
+   
 ## References:
 
    - [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
