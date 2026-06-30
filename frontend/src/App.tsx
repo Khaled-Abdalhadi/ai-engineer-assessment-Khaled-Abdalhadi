@@ -1,10 +1,11 @@
-
-import { Message } from '@mui/icons-material';
 import './App.css'
-import {ChatBox, createEchoAdapter} from "@mui/x-chat";
+import {ChatBox} from "@mui/x-chat";
 import type { ChatAdapter, ChatMessage } from '@mui/x-chat/headless';
 
 function App() {
+
+  //backend server URL
+  const hostName = 'http://127.0.0.1:8000'
 
   const initialConversations = [
     {
@@ -48,7 +49,7 @@ function App() {
     async sendMessage({ message, signal }) {
       return new ReadableStream({
         async start(controller) {
-          const response = await fetch('http://127.0.0.1:8000/ask', {
+          const response = await fetch(`${hostName}/ask`, {
             method: 'POST',
             body: JSON.stringify(
               message.parts[0]?.type === 'text' ? message.parts[0].text : '',
