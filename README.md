@@ -74,9 +74,19 @@ This project is part of an assessment for an AI software engineer position at [A
   If the server is running successfully, you should recieve a JSON response containing the model's response.
 
   **Example:**
-  ```
-  "The 2022 FIFA World Cup, hosted by Qatar, featured 32 competing teams across 64 matches, ultimately culminating in Argentina’s victory over France in the final. The tournament achieved a total attendance of 3,404,252 spectators, resulting in a healthy average of 53,191 fans per match. Kylian Mbappé finished as the tournament's top scorer, securing the Golden Boot with 8 goals."
-  ```
+
+  If the server is running successfully, you should receive a JSON response containing the model's answer.
+
+**Example:**
+
+```
+{
+  "message": "The 2022 FIFA World Cup, hosted by Qatar, featured 32 teams competing in a total of 64 matches. Argentina emerged as the champion after defeating runner-up France, while Kylian Mbappé secured the Golden Boot as the top scorer with eight goals. The tournament recorded a total attendance of 3,404,252 spectators, resulting in an average attendance of 53,191 fans per match.",
+  "source": "Football - FIFA World Cup, 1930 - 2026",
+  "source_url": "https://www.kaggle.com/datasets/piterfm/fifa-football-world-cup?resource=download&select=world_cup.csv"
+}
+```
+  
 
 ## Running the bot with a user interface
 
