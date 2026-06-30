@@ -28,7 +28,7 @@ This project is part of an assessment for an AI software engineer position at [A
   3. Create a virtual environment:
 
   ```
-  python -m venv .venv
+  python3 -m venv .venv
   ```
 
   4. Activate the virtual environment:
@@ -126,5 +126,8 @@ You should see the chatbot interface
 
    - [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
    - [FastAPI Documentation](https://fastapi.tiangolo.com/tutorial/first-steps/)
+   - [SuperHero API Documentation](https://superheroapi.com/)
+   - [MUI X Chat](https://mui.com/x/react-chat/)
    - [FIFA World Cup 1930-2022 data](https://www.kaggle.com/datasets/piterfm/fifa-football-world-cup?resource=download&select=world_cup.csv)
    - [Analyzing PDFs and CSV](https://geminibyexample.com/016-pdf-csv-analysis/)
+
