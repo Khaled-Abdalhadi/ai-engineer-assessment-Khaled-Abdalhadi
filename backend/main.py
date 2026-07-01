@@ -17,8 +17,6 @@ gemini_api_key = os.getenv("GEMINI_API_KEY")
 superhero_token = os.getenv("SUPERHERO_API_TOKEN")
 superhero_base_url = f"https://superheroapi.com/api/{superhero_token}"
 
-print("hello" * 50000)
-
 app = FastAPI()
 
 client = genai.Client(api_key= gemini_api_key)
@@ -32,6 +30,11 @@ app.add_middleware(
 )
 
 #open the world cup csv file and read it in bytes
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(BASE_DIR, "world_cup.csv")
+
+print(BASE_DIR)
+
 with open("world_cup.csv", "rb") as f:
     world_cup_bytes = f.read()
     
