@@ -2,6 +2,8 @@
 
 I have created a very simple AI chatbot with Google Gemini AI Studio API, that can only answer questions about superheros and the FIFA world cup. You can run it on a local server without a user interface as well as with a user interface.
 
+The chatbot is completely responsive and runs on both desktop and phones. You can test it out here: [Chatbot](https://applab-chatbot-assessment.netlify.app/)
+
 This project is part of an assessment for an AI software engineer position at [Applab](https://applab.qa/)
 
 ## Tech Stack:
@@ -10,6 +12,8 @@ This project is part of an assessment for an AI software engineer position at [A
   - React
   - Material UI
   - Google Gemini AI Studio
+  - Render
+  - Netlify
 
 ## Run the server locally
 
@@ -130,4 +134,6 @@ You should see the chatbot interface
    - [MUI X Chat](https://mui.com/x/react-chat/)
    - [FIFA World Cup 1930-2022 data](https://www.kaggle.com/datasets/piterfm/fifa-football-world-cup?resource=download&select=world_cup.csv)
    - [Analyzing PDFs and CSV](https://geminibyexample.com/016-pdf-csv-analysis/)
+   - [FastApi Error Handling tutorial](https://fastapi.tiangolo.com/tutorial/handling-errors/)
+   - [FastApi Error Handling](https://www.honeybadger.io/blog/fastapi-error-handling/)
 
