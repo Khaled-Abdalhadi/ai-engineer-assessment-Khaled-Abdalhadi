@@ -35,7 +35,7 @@ csv_path = os.path.join(BASE_DIR, "world_cup.csv")
 
 print(BASE_DIR)
 
-with open("world_cup.csv", "rb") as f:
+with open(csv_path, "rb") as f:
     world_cup_bytes = f.read()
     
 #prompt engineering of the system prompt (configuring the model)
