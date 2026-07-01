@@ -4,8 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
 from typing import Annotated
 from google import genai
-from google.genai import types, errors
-from google.genai._gaos.lib.compat_errors import AuthenticationError
+from google.genai import types
+from google.genai._gaos.lib.compat_errors import AuthenticationError, RateLimitError
 from dotenv import load_dotenv
 import requests
 import json
@@ -17,6 +17,7 @@ gemini_api_key = os.getenv("GEMINI_API_KEY")
 superhero_token = os.getenv("SUPERHERO_API_TOKEN")
 superhero_base_url = f"https://superheroapi.com/api/{superhero_token}"
 
+print("hello" * 50000)
 
 app = FastAPI()
 
@@ -193,21 +194,19 @@ def call_gemini(user_prompt: Annotated[str, Body()]):
                             "source": "Football - FIFA World Cup, 1930 - 2026",
                             "source_url": "https://www.kaggle.com/datasets/piterfm/fifa-football-world-cup?resource=download&select=world_cup.csv"
                         }
-    
-    #add specific gemini error handling here later                    
-    except errors.APIError as e:
-        print("GenAI API error occured!")
-        
-    #if gemini failed to catch error or if we have general error
+ 
+    #error handlers
     except Exception as e:
         
         ##identify the error
-        print(e)
+        print(type(e))
         
         #error triggered when gemini authentication fails (not sure why i cant use it in the above exception)
         if isinstance(e, AuthenticationError):
             raise HTTPException(status_code = 401, detail = f"Gemini API Error: {e.body[0]["error"]["message"]}")
         
+        elif isinstance(e, RateLimitError):
+            return "Your message is too long, please send a shorter message!"
         
             
     
@@ -219,3 +218,6 @@ def call_gemini(user_prompt: Annotated[str, Body()]):
 # 4. add catch errors for all api calls
 # 5. restrict the llm to only a fixed amount of token. Anything creater than that should return an error
 # 6. add rate limiting to only send specific number of requests to the model in a fixed period of time
+
+#Things to do to improve:
+ #include a consistent data structure for the model response.

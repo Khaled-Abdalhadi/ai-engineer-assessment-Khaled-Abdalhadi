@@ -73,7 +73,7 @@ function App() {
               const text = JSON.parse(decoder.decode(value, { stream: true }));
            
               //can't find the super hero
-              if(text.message == `I am sorry but I could not find any information about ${text.name}  😕`) {
+              if(text.message == `I am sorry but I could not find any information about ${text.name}  😕`|| text.message == "Your message is too long, please send a shorter message!") {
                 finalMessage = text.message
               }
 
