@@ -6,12 +6,16 @@ from typing import Annotated
 from google import genai
 from google.genai import types, errors
 from google.genai._gaos.lib.compat_errors import AuthenticationError
+from dotenv import load_dotenv
 import requests
 import json
+import os
 
-gemini_api_key = "AQ.Ab8RN6LAKgtQGpg5JTQ4ogBk3JI_p8TAUY1iIZUnVGgkMK5tgA"
-token = "3779984fa6a1dcc9471edd030d658461"
-superhero_base_url = f"https://superheroapi.com/api/{token}"
+load_dotenv()
+
+gemini_api_key = os.getenv("GEMINI_API_KEY")
+superhero_token = os.getenv("SUPERHERO_API_TOKEN")
+superhero_base_url = f"https://superheroapi.com/api/{superhero_token}"
 
 
 app = FastAPI()
