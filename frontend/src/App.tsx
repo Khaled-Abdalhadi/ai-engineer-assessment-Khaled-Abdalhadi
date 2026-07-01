@@ -4,8 +4,8 @@ import type { ChatAdapter, ChatMessage } from '@mui/x-chat/headless';
 
 function App() {
 
-  //backend server URL
-  const hostName = 'http://127.0.0.1:8000'
+  //backend server URL (DO NOT CHANGE PROD domain, only change local domain based on where your server is hosted locally)
+  const hostName = import.meta.env.PROD ? 'https://applab-chatbot-assessment.netlify.app/' : 'http://127.0.0.1:8000'
 
   const initialConversations = [
     {
