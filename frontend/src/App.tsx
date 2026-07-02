@@ -5,7 +5,7 @@ import type { ChatAdapter, ChatMessage } from '@mui/x-chat/headless';
 function App() {
 
   //backend server URL (DO NOT CHANGE PROD domain, only change local domain based on where your server is hosted locally)
-  const hostName = import.meta.env.PROD ? 'https://ai-engineer-assessment-khaled-abdalhadi.onrender.com/' : 'http://127.0.0.1:8000'
+  const hostName = import.meta.env.PROD ? 'https://ai-engineer-assessment-khaled-abdalhadi.onrender.com' : 'http://127.0.0.1:8000'
 
   const initialConversations = [
     {
@@ -71,7 +71,7 @@ function App() {
               if (done) break;
 
               const text = JSON.parse(decoder.decode(value, { stream: true }));
-           
+              console.log(text)
               //can't find the super hero
               if(text.message == `I am sorry but I could not find any information about ${text.name}  😕`|| text.message == "Your message is too long, please send a shorter message!") {
                 finalMessage = text.message
